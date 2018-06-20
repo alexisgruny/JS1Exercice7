@@ -1,17 +1,13 @@
 function bizarre(){
-  var x = document.getElementById("shoeSize").value;
-  var y = document.getElementById("yearOfBirth").value;
-  var a;
-  if (x && y != 'string'){
-  alert("entrez un nombre s'il vous plait")
-  }
-  else{
-
-  a = x * 2;
-  a = a + 5;
-  a = a * 50;
-  a = a - y;
-  a = a + 1766;
-  alert(a);
+  var shoeSize = document.getElementById("shoeSize").value;
+  var yearOfBirth = document.getElementById("yearOfBirth").value;
+  var resultat;
+  if (/^[0-9]+$/.test(shoeSize && yearOfBirth) == true);{
+  resultat = shoeSize * 2;
+  resultat = resultat + 5;
+  resultat = resultat * 50;
+  resultat = resultat - yearOfBirth;
+  resultat = resultat + 1766;
+  alert(resultat);
   }
 }
